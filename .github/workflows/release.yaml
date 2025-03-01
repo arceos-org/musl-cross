@@ -73,6 +73,8 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-20.04
+    permissions:
+      contents: write
     needs:
       - build
     if: github.event_name == 'release'
